@@ -1,0 +1,64 @@
+.Cards-container { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 5px 0 65px;
+    box-sizing: border-box;
+
+    li {
+        display: flex;
+        width: 30%;
+        height: 23%;
+        margin: 1%;
+        border: 2px solid #fff;
+      
+        .Card-box {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          color: #fff;
+      
+          i {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            font-size: 48px;  
+          }
+        }
+
+        &.Card-try {
+            .Card-box {
+                animation: opening 1s;
+                background: #fff6;
+            }
+        }
+
+        &.Card-solved {
+            animation: opening 1s;
+            .Card-box {
+                background: #00000082;
+                color: #fff;
+            }
+        }
+      }
+}
+
+@keyframes opening {
+    0% {
+      color: transparent;
+      transform: rotateY(180deg);
+    }
+    99.9% {
+      color: #fff;
+    }
+    100% {
+      color: #fff;
+      transform: rotateY(0deg);
+    }
+}

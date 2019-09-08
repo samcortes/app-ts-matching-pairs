@@ -1,0 +1,170 @@
+.App-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #f98827, #cb3a0d);
+}
+
+.Apps-wrapper {
+    position: relative;
+    height: 100%;
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.App-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 1px 2px 8px #cb3a0d;
+  
+    p {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        font-weight: 300;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 2px;
+        background: #ffffff7a;
+        border-radius: 4px;
+    }
+
+    img {
+        max-width: 100%;
+        width: 30px;
+        height: auto;
+    }
+
+    span {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .thick {
+        font-weight: 400;
+        color: #ff3b30;
+    }
+    .thin {
+        font-weight: 100;
+    }
+}
+
+.Timer {
+    color: #fff;
+}
+
+.Retry-wrapper {
+    display: none;
+}
+
+.App-won {
+    .Retry-wrapper {
+        display: block;
+        position: absolute;
+        height: 100%;
+        max-width: 480px;
+        width: 100%;
+        margin: 0 auto;
+        background-color: #000000e0;
+        animation: win-opening 2s;
+
+        .Retry-win-wrapper {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            h1 {
+                margin: 0;
+                text-transform: uppercase;
+                font-size: 48px;            
+            }
+
+            h3 {
+                margin-top: 100px;
+                margin-bottom: 0;
+                font-size: 26px;
+            }
+
+            h4 {
+                color: #af9d80;
+            }
+
+            h1, h3  {
+
+                background: linear-gradient(180deg, #f98827, #cb3a0d);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                -webkit-animation-name: masked-animation;
+                -webkit-animation-duration: 40s;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-timing-function: linear;
+            }
+        }
+
+        i {
+            display: block;
+            width: 100px;
+            height: 100px;
+            color: red;
+            font-size: 100px;
+            margin: 0 auto;
+        }
+
+        button {
+            background: transparent;
+            border: 0;
+            color: #fff;
+            font-size: 22px;
+            margin: 0 auto;
+            display: flex;
+            border-radius: 5px;
+            padding: 10px;
+            border: 1px solid #fff;
+        }
+    }
+}
+
+@keyframes masked-animation {
+	0% {background-position: left bottom;}
+	100% {background-position: right bottom;}
+}
+
+@keyframes win-opening {
+    0% {
+        visibility: hidden;
+    }
+    74.9% {
+        visibility: hidden;
+    }
+    75% {
+        visibility: visible;
+        color: #fff;
+        transform: rotateY(180deg);
+    }
+    100% {
+      color: #fff;
+      transform: rotateY(0deg);
+    }
+}
+
+.App-copyright {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    font-size: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+}
